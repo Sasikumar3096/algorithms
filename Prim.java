@@ -2,11 +2,8 @@ import java.util.Scanner;
 
 public class Prim
 {
-
-  static int count = 15;
-  static int n, i;
+  static int n;
   static int[][] matrix;
-
   static int dist[];
   static int visited[];
   static int path[];
@@ -24,7 +21,7 @@ public class Prim
   }
   public static void main (String[]args)
   {
-    int j;
+    int i,j;
     Scanner s = new Scanner (System.in);
     System.out.println ("Enter the number of vertices");
     n = s.nextInt ();
@@ -40,7 +37,7 @@ public class Prim
   }
 
   static int min ()
-  {
+  {	int i;
     int min_val = Integer.MAX_VALUE, min_index = 0;
     for (i = 0; i < n; i++)
       if (min_val > dist[i] && visited[i] != 1)
@@ -71,7 +68,7 @@ public class Prim
   }
   static void display ()
   {
-    int sum = 0;
+    int sum = 0,i;
     System.out.println ("Edge     Weight");
     for (i = 1; i < n; i++)
       {
