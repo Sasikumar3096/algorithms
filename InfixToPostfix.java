@@ -30,7 +30,6 @@ public class InfixToPostfix {
 				else
 					if(exp[i]==')')
 					{
-						System.out.println(stack.size());
 						while(!stack.isEmpty() && stack.peek()!='('){
 							result += stack.pop();
 						}
