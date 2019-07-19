@@ -16,8 +16,7 @@ public class InfixToPostfix {
 	public static void main(String[] args) {
 		char exp[]= "A+(B*C-(D/E-F)*G)*H".toCharArray();
 		String result="";
-		Stack<Character> stack = new Stack<Character>(); 
-		int k=0;
+		Stack<Character> stack = new Stack<Character>();
 		for(int i=0;i<exp.length;i++)
 		{
 			if(Character.isLetter(exp[i])) {
